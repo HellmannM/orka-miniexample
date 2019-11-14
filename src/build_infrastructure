@@ -1,0 +1,44 @@
+#!/bin/bash
+curr=$PWD
+root="`dirname \"$BASH_SOURCE\"`"
+root="`( cd \"$root\" && pwd )`"
+if [ -z "$root" ] ; then
+    exit 1
+fi
+cd "${root}"
+
+build_dir=$1
+target_board=$2
+
+# Configure the infrastructure (provide path to custom IP if desired).
+# This can be done interactively or with here-document (don't use tabs).
+mkdir ${build_dir}
+cd ${build_dir}
+make -C "${root}/../src/3rdparty/fpgaInfrastructure/hw/src/configurator/" all BUILD_DIR=$build_dir
+cd $root
+mkdir ${build_dir}/configuration_files
+${build_dir}/creator ${build_dir}/configuration_files<<EOF
+set design_dir ${build_dir}/2018.2/vivado
+set num_cpu_cores 36
+load_default ${target_board}
+set enable_gpio false
+set enable_microblaze true
+set enable_usb_uart true
+add ${build_dir}/2018.2/repo/firstip 100
+add ${build_dir}/2018.2/repo/secondip 100
+write
+quit
+EOF
+
+# if building for vcu118:
+#set enable_usb_uart true
+#set enable_microblaze true
+
+# Run vivado and generate the bitstream.
+# LAST_UUID will be exported to be able to find the files.
+if [ ! -d "${build_dir}/bitstreams" ] ; then
+    mkdir "${build_dir}/bitstreams"
+fi
+cd "${build_dir}"
+source "${root}/../src/3rdparty/fpgaInfrastructure/hw/generate_bitstream" "${build_dir}/bitstreams/" "${build_dir}/configuration_files/"
+cd "${root}"

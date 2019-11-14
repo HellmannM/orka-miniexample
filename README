@@ -1,0 +1,10 @@
+git submodule update --recursive --init
+mkdir build
+cd build
+cmake .. -DTARGET_BOARD=arty-a7-100 -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always -std=c++11"
+
+# source Vivado
+
+make ips
+make infrastructure
+make hostprogram 2>&1 | less -R

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# get path to this file
+root_path="`dirname \"$BASH_SOURCE\"`"
+root_path="`( cd \"$root_path\" && pwd )`"
+if [ -z "$root_path" ] ; then
+    exit 1
+fi
+
+# Read target and destination paths from args
+if [[ $# -ne 3 ]] ; then
+    echo "Usage: run IP_NAME BUILD_DIR TARGET_BOARD"
+    exit 1
+fi
+target=$1
+dest=$2
+target_board=$3
+
+vivado_hls -f ${root_path}/build_ip.tcl -tclargs "${root_path}/${target} ${root_path}/${target} ${dest} ${target_board}"

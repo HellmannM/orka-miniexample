@@ -1,0 +1,160 @@
+{
+    "FileType": "boardsupportpackage",
+    "Comment": "Kein Kommentar",
+    "BoardName": "vcu118",
+    "BlockDesignName": "axi_pcie_mig",
+    "ManufacturerBoard": "Xilinx",
+    "Drivers":
+    [
+        {
+            "DriverName": "xdma",
+            "Instance": 0,
+            "Port": 0,
+            "Speed": 0
+        },
+        {
+            "DriverName": "usb_uart",
+            "Instance": 0,
+            "Port": 0,
+            "Speed": 9600
+        }
+    ],
+    "pciebars":
+    [
+        {
+            "type": "MMIO",
+            "size": "512MB"
+        },
+        {
+            "type": "DMA",
+            "size": "64KB"
+        }
+    ],
+    "FPGAs":
+    [
+        {
+            "Manufacturer": "Xilinx",
+            "FullNameQualifier": "xcvu9p-flga2104-2L-e",
+            "Driver": 0,
+            "Bitstream": "636f9b98-1dcf-43bc-a87a-09b148b3ca9b.bit",
+            "Components":
+            [
+                {
+                    "name": "/firstip0/Data_m_axi_gmem/SEG_mig_0_C0_DDR4_ADDRESS_BLOCK",
+                    "offset": "0x0000000080000000",
+                    "range": "0x0000000080000000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_firstip0_Reg",
+                    "offset": "0x01000000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/secondip0/Data_m_axi_gmem/SEG_mig_0_C0_DDR4_ADDRESS_BLOCK",
+                    "offset": "0x0000000080000000",
+                    "range": "0x0000000080000000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_secondip0_Reg",
+                    "offset": "0x01000000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_axi_timer_0_Reg",
+                    "offset": "0x00050000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_axi_uart_Reg",
+                    "offset": "0x00060000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_system_management_wiz_0_Reg",
+                    "offset": "0x00070000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI_LITE/SEG_axi_intc_0_Reg",
+                    "offset": "0x00040000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/xdma_0/M_AXI/SEG_mig_0_C0_DDR4_ADDRESS_BLOCK",
+                    "offset": "0x0000000080000000",
+                    "range": "0x0000000080000000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_axi_intc_0_Reg",
+                    "offset": "0x00040000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_axi_intc_0_Reg",
+                    "offset": "0x00040000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_axi_timer_0_Reg",
+                    "offset": "0x00050000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_axi_timer_0_Reg",
+                    "offset": "0x00050000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_axi_uart_Reg",
+                    "offset": "0x00060000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_axi_uart_Reg",
+                    "offset": "0x00060000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_system_management_wiz_0_Reg",
+                    "offset": "0x00070000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_system_management_wiz_0_Reg",
+                    "offset": "0x00070000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_ssw0_Reg",
+                    "offset": "0x01000000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_ssw0_Reg",
+                    "offset": "0x01000000",
+                    "range": "0x00010000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_mig_0_C0_DDR4_ADDRESS_BLOCK",
+                    "offset": "0x80000000",
+                    "range": "0x80000000"
+                },
+                {
+                    "name": "/microblaze_0/Data/SEG_dlmb_bram_if_cntlr_Mem",
+                    "offset": "0x00000000",
+                    "range": "0x00002000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem",
+                    "offset": "0x00000000",
+                    "range": "0x00002000"
+                },
+                {
+                    "name": "/microblaze_0/Instruction/SEG_mig_0_C0_DDR4_ADDRESS_BLOCK",
+                    "offset": "0x80000000",
+                    "range": "0x80000000"
+                }
+            ]
+        }
+    ]
+}

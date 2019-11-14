@@ -1,0 +1,62 @@
+{
+  "FileType": "BoardSupportPackageFPGAConfig",
+  "ManufacturerFPGA":
+  [
+    {
+      "--------------------------": "-------------------------------------------",
+      "ManufacturerName": "Xilinx",
+      "ManufacturerID": 1,
+      "FPGAType":
+      [
+        {
+          "FullNameQualifier": "xcvu9p-flga2104-2L-e",
+          "Category": "GeneralPurpose",
+          "Family": "Virtex7UltraScalePlus",
+          "Package": "FLGA2104",
+          "Speedgrade": "2L",
+          "Temperature": "E"
+        },
+        {
+          "FullNameQualifier": "XC7VX690T-2FFG1761C",
+          "Category": "GeneralPurpose",
+          "Family": "Virtex7",
+          "Package": "FFG1761",
+          "Speedgrade": "2",
+          "Temperature": "C"
+        },
+        {
+          "FullNameQualifier": "XC7VX690T-2FFG1761C",
+          "Category": "GeneralPurpose",
+          "Family": "Artix7",
+          "Package": "CSG324",
+          "Speedgrade": "1l",
+          "Temperature": "I"
+        }
+      ]
+    },
+    {
+      "--------------------------": "-------------------------------------------",
+      "ManufacturerName": "Intel",
+      "ManufacturerID": 2,
+      "FPGAType":
+      [
+        {
+          "FullNameQualifier": "ABC-LGA2104E",
+          "Category": "GeneralPurpose",
+          "Family": "Virtex7UltraScalePlus",
+          "Package": "FLGA2104",
+          "Speedgrade": "2L",
+          "Temperature": "E"
+        },
+        {
+          "FullNameQualifier": "BCD-2FFG1761C",
+          "Category": "GeneralPurpose",
+          "Family": "Virtex7",
+          "Package": "FFG1761",
+          "Speedgrade": "2",
+          "Temperature": "C"
+        }
+      ]
+    }
+  ]
+}
